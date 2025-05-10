@@ -26,6 +26,7 @@ import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 export default function HomePage() {
   const t = useI18n();
   const currentLocale = useCurrentLocale();
+
   const salaryFieldId = useId();
   const productFieldId = useId();
   const salaryLabelId = `label-for-${salaryFieldId}`;
