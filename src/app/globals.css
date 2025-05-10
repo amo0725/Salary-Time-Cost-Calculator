@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-slate-50 text-slate-900;
+  @apply dark:bg-slate-900 dark:text-slate-50;
+  transition-property: background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Ensure selection colors also adapt or are neutral */
+::selection {
+  @apply bg-sky-500 text-white;
+  /* For dark mode, you might want a different selection if sky-500 is too bright on light text */
+  /* @apply dark:bg-sky-700 dark:text-slate-100; */
+}
+
+/* Optional: Basic body styling for dark/light mode (can be expanded later) */
+/*
+body {
+  @apply bg-white text-black dark:bg-black dark:text-white;
+  transition-property: background-color, color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+*/

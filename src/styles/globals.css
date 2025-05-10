@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+
+  /* React Select Light Theme Variables */
+  --rs-control-bg: theme('colors.slate.50');
+  --rs-control-border-color: theme('colors.slate.300');
+  --rs-control-hover-border-color: theme('colors.slate.400');
+  --rs-control-focused-border-color: theme('colors.sky.500');
+  --rs-input-text-color: theme('colors.slate.900');
+  --rs-placeholder-color: theme('colors.slate.400');
+  --rs-menu-bg: theme('colors.white');
+  --rs-menu-border-color: theme('colors.slate.300');
+  --rs-option-selected-bg: theme('colors.sky.600');
+  --rs-option-selected-text: theme('colors.white');
+  --rs-option-focused-bg: theme('colors.sky.100');
+  --rs-option-text: theme('colors.slate.900');
+  --rs-option-active-bg: theme('colors.sky.200');
+  --rs-indicator-color: theme('colors.slate.500');
+  --rs-indicator-hover-color: theme('colors.slate.700');
+
+  /* DEBUG specific vars */
+  --debug-light-bg: #f9fafb; /* slate-50 */
+  --debug-light-border: #d1d5db; /* slate-300 */
+}
+
+html.dark {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+
+  /* React Select Dark Theme Variables */
+  --rs-control-bg: rgba(51, 65, 85, 0.5); /* Original slate-700 (#334155) with 50% alpha */
+  --rs-control-border-color: theme('colors.slate.600');
+  --rs-control-hover-border-color: theme('colors.slate.500');
+  --rs-control-focused-border-color: theme('colors.sky.500');
+  --rs-input-text-color: theme('colors.slate.50');
+  --rs-placeholder-color: theme('colors.slate.500');
+  --rs-menu-bg: theme('colors.slate.800');
+  --rs-menu-border-color: theme('colors.slate.700');
+  --rs-option-selected-bg: theme('colors.sky.600');
+  --rs-option-selected-text: theme('colors.white');
+  --rs-option-focused-bg: theme('colors.slate.700');
+  --rs-option-text: theme('colors.slate.50');
+  --rs-option-active-bg: theme('colors.slate.600');
+  --rs-indicator-color: theme('colors.slate.400');
+  --rs-indicator-hover-color: theme('colors.slate.300');
+
+  /* DEBUG specific vars */
+  --debug-dark-bg: transparent; /* Changed to transparent */
+  --debug-dark-border: #4b5563; /* slate-600 */
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
